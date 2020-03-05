@@ -13,7 +13,12 @@ Retrieve connection details (hostname/port) and connect to your server:
   $ nc tcp.apps.pcfone.io 10017
 ```
 
-Run locally just using docker
+Run on k8s
+```console
+  $ kubectl run --generator=run-pod/v1 --image=jmcdice/cloud-shell:latest cloud-shell 
+```
+
+Run locally using docker
 ```console
   $ docker run -itd --name starwars -p 801:8080 jmcdice/cf-starwars
   $ nc localhost 801
